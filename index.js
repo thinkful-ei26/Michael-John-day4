@@ -57,6 +57,12 @@ function main() {
   $('.shopping-list').on('click', 'button.shopping-item-toggle', function(event) {  
     const target = $(event.currentTarget).closest('li').find('span.shopping-item'); 
     target.toggleClass('shopping-item__checked'); }); 
+
+    $('.shopping-list').on('click', '.shopping-item-delete', function(event) {  
+      const mark = $(event.currentTarget).closest('li'); 
+      mark.remove('li'); });        
+
+
   }
 
 main();
